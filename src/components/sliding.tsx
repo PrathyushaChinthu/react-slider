@@ -13,8 +13,6 @@ const Sliding = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: "linear",
-    vertical: false, // Set vertical to false to display images from left to right
   };
 
   return (
