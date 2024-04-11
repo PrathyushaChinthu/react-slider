@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Sliding from "./components/sliding";
 import Framermotion from "./components/motion/framermotion";
+import Animate from "./components/dropdown/animate";
 const App = () => {
   return (
     <>
@@ -18,13 +19,15 @@ const App = () => {
         </Box>
       </Box> */}
 
-      <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
+      {/* <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
         <Box mt={2}>
           <Framermotion />
         </Box>
-        {/* <Box width="75%" mt={2}>
-          Hello
-        </Box> */}
+      </Box> */}
+      <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
+        <Box mt={2}>
+          <Animate />
+        </Box>
       </Box>
     </>
   );
