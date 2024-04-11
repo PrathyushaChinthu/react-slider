@@ -53,13 +53,6 @@ const Sliding = () => {
             style={{ width: "100%" }}
           />
         </Box>
-        <Box>
-          <img
-            src="src/assets/images/image_6.jpg"
-            alt="Image 6"
-            style={{ width: "100%" }}
-          />
-        </Box>
       </Slider>
     </Box>
   );
