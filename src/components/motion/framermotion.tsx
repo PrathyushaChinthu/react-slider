@@ -43,9 +43,23 @@ const Framermotion: React.FC<SidebarProps> = () => {
         custom={height}
         ref={containerRef}
       >
-        <motion.div className="background" variants={sidebar} />
+        {/* Place MenuToggle inside the motion.div */}
+        <motion.div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            height: "100vh",
+            backgroundColor: "#ffffff",
+            width: "25%",
+            padding: "20px", // Add padding to all sides
+          }}
+          className="background"
+          variants={sidebar}
+        >
+          <MenuToggle toggle={() => toggleOpen()} />
+        </motion.div>
         <Navigation />
-        <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
     </>
   );

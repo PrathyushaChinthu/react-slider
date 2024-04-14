@@ -1,10 +1,9 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { SVGProps } from "framer-motion"; // Correct import
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Path: React.FC<SVGProps<SVGPathElement>> = (props) => (
+const Path: React.FC<any> = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
