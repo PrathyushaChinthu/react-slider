@@ -19,16 +19,16 @@ const App = () => {
         </Box>
       </Box> */}
 
-      <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
+      {/* <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
         <Box mt={2}>
           <Framermotion />
         </Box>
-      </Box>
-      {/* <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
+      </Box> */}
+      <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
         <Box mt={2}>
           <Animate />
         </Box>
-      </Box> */}
+      </Box>
     </>
   );
 };

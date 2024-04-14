@@ -12,6 +12,17 @@ const itemVariants: Variants = {
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
 
+const containerVariants: Variants = {
+  open: {
+    height: "auto",
+    transition: { staggerChildren: 0.05, delayChildren: 0.3 },
+  },
+  closed: {
+    height: 0,
+    transition: { duration: 0.3 },
+  },
+};
+
 const Animate: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,11 +39,11 @@ const Animate: React.FC = () => {
           alignItems: "center",
           backgroundColor: "#fff",
           padding: 1,
-          cursor: "pointer", // Added cursor pointer for the "Menu" text
-          borderRadius: "10px", // Added border radius for rounded corners
-          marginBottom: "10px", // Added margin bottom for gap
+          cursor: "pointer",
+          borderRadius: "10px",
+          marginBottom: "10px",
         }}
-        onClick={() => setIsOpen(!isOpen)} // Added onClick event handler for the "Menu" text
+        onClick={() => setIsOpen(!isOpen)}
       >
         <Typography variant="body1">Menu</Typography>
         <motion.div
@@ -47,42 +58,18 @@ const Animate: React.FC = () => {
         </motion.div>
       </Box>
 
-      {isOpen && (
+      <motion.div variants={containerVariants} style={{ overflow: "hidden" }}>
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column", // Display items in a column
-            alignItems: "flex-start", // Align items to the start of the column
-            backgroundColor: "white", // Apply grey background color
+            flexDirection: "column",
+            alignItems: "flex-start",
+            backgroundColor: "white",
             padding: 1,
-            borderRadius: "10px", // Add rounded corners
-            overflow: "hidden", // Hide overflow to clip rounded corners
+            borderRadius: "10px",
           }}
         >
-          <List
-            component={motion.ul}
-            variants={{
-              open: {
-                clipPath: "inset(0% 0% 0% 0% round 10px)",
-                transition: {
-                  type: "spring",
-                  bounce: 0,
-                  duration: 0.7,
-                  delayChildren: 0.3,
-                  staggerChildren: 0.05,
-                },
-              },
-              closed: {
-                clipPath: "inset(10% 50% 90% 50% round 10px)",
-                transition: {
-                  type: "spring",
-                  bounce: 0,
-                  duration: 0.3,
-                },
-              },
-            }}
-            style={{ pointerEvents: isOpen ? "auto" : "none" }}
-          >
+          <List>
             <ListItem component={motion.li} variants={itemVariants}>
               Item 1
             </ListItem>
@@ -100,7 +87,7 @@ const Animate: React.FC = () => {
             </ListItem>
           </List>
         </Box>
-      )}
+      </motion.div>
     </motion.nav>
   );
 };
