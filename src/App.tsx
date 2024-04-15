@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import Sliding from "./components/sliding";
+import DragDrop from "./components/drag-drop/drag-drop";
 import Framermotion from "./components/motion/framermotion";
 import Animate from "./components/dropdown/animate";
 const App = () => {
@@ -24,9 +25,14 @@ const App = () => {
           <Framermotion />
         </Box>
       </Box> */}
-      <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
+      {/* <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
         <Box mt={2}>
           <Animate />
+        </Box>
+      </Box> */}
+      <Box bgcolor="blue" minHeight="100vh" p={4} display="flex">
+        <Box mt={2}>
+          <DragDrop />
         </Box>
       </Box>
     </>
