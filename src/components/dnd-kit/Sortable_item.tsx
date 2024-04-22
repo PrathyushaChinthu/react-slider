@@ -16,7 +16,7 @@ export function Item(props: ItemProps) {
     justifyContent: "center",
     border: "1px solid black",
     margin: "10px 0",
-    background: "white",
+    background: "lightyellow",
   };
 
   return <div style={style}>{id}</div>;
