@@ -1,9 +1,15 @@
 import { Box } from "@mui/material";
+
+import { Dnd } from "./components/dnd/Dnd";
 import Sliding from "./components/sliding";
 import Notistack from "./components/notistack/notistack";
 import DragDrop from "./components/drag-drop/drag-drop";
 import Framermotion from "./components/motion/framermotion";
 import Animate from "./components/dropdown/animate";
+import Quill from "./components/quill/quill";
+import QuillComponent from "./components/quill/quill";
+import Dndkit from "./components/dnd-kit/Dndkit";
+
 const App = () => {
   return (
     <>
@@ -36,10 +42,19 @@ const App = () => {
           <DragDrop />
         </Box>
       </Box> */}
-      <Box bgcolor="lightpink" minHeight="100vh" p={4} display="flex">
-        <Box mt={2}>
+      {/* <Box bgcolor="lightpink" minHeight="100vh" p={4} display="flex">
+        <Box mt={2} width="50%">
           <Notistack />
         </Box>
+        <Box mt={2} width="50%">
+          <QuillComponent />
+        </Box>
+      </Box> */}
+      {/* <Box>
+        <Dnd />
+      </Box> */}
+      <Box>
+        <Dndkit />
       </Box>
     </>
   );

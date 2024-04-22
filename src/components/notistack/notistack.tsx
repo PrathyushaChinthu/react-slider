@@ -8,15 +8,15 @@ const Notistack = (props: Props) => {
   const { enqueueSnackbar } = useSnackbar();
 
   return (
-    <Box bgcolor="white" p={1}>
+    <Box bgcolor="white" p={1} width={80}>
       <Button
         onClick={() => {
-          enqueueSnackbar("I like hooks", {
-            autoHideDuration: 3000,
+          enqueueSnackbar("Do you want cookies?", {
+            autoHideDuration: 5000,
           });
         }}
       >
-        Show snackbar
+        uplabs
       </Button>
     </Box>
   );
